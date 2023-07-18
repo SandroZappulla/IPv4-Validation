@@ -90,7 +90,7 @@ digit_split = IPv4_entry.split(".")
 # Überprüfung: Validierung einer einzelnen Zahl (Zwischen 0-255)
 correct_number_counter = 0
 
-# Bevor jede Zahl einzelnd Validiert wird erwarten wir das erst die Überprüfung "Ob NUR Ziffern und Punkte enthalten sind" richtig ist
+# Bevor jede Zahl einzelnd Validiert wird erwarten wir das erst die Überprüfung "RegEx" richtig ist
 if check_regex_pattern == True:
     for digit in digit_split:
         int_digit = int(digit)

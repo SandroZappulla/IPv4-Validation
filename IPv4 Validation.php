@@ -8,10 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // VARIABLES
     $ipv4 = htmlspecialchars($_POST['ipv4']);
 
-    echo "Objekt_name: ", $object_name, "<br>";
     echo "IPv4: ", $ipv4, "<br>";
-    echo "IPv6: ", $ipv6;
-    echo "<br><br><br><br><br>";
 
 
     // VALIDATION
@@ -30,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $char_counter = 0;
 
     // Überprüfe: Ob Leerer Eintrag (Auch für Objektname und IPv6 Adresse)
-    if(empty($object_name) || (empty($ipv4)) || (empty($ipv6))) {
+    if(empty($ipv4)) {
         echo $error_empty;
     }
 

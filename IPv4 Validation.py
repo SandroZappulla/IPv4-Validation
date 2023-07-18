@@ -2,14 +2,14 @@
 # RegEx
 import re
 
-# Variables
+# Test Variables
 my_ip = "192.168.178.177"
 test = ""
 short_ip = "1.1.1.1"
 not_valid_ip = "256.-1.1000.532"
 
-# Eintrag # Später entfernen bitte
-IPv4_entry = my_ip
+# Test entry
+#IPv4_entry = my_ip
 
 # checks
 check_empty_input = False
@@ -24,17 +24,15 @@ check_number_range = False
 
 # MAIN
 print("IPv4 Validierung")
-# bitte Später hinzufügen
-#IPv4_entry = input("Bitte Geben Sie eine gültige IPv4-Adresse ein: ") # Eingabe
+IPv4_entry = input("Bitte Geben Sie eine gültige IPv4-Adresse ein: ") # Eingabe
 
-# Überprüfe: Nicht leer
-# NICHT 100% fertig
+# Check: Not empty
 if IPv4_entry == '':
     check_empty_input = True
 
 
 
-# Überprüfe: Länge (Mind. 7 Max. 15 Zeichen)
+# Check: Length (Mind. 7 Max. 15 Zeichen)
 length = len(IPv4_entry)
 if length >= 7 and length <= 15:
     check_length = True 

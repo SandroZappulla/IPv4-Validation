@@ -1,14 +1,19 @@
+# IPv4 Validation
+# Author: Sandro Zappulla
+# Github: @SandroZappulla
+# version: v1.0
+
 # IMPORT
 # RegEx
 import re
 
-# Test Variables
-my_ip = "192.168.178.177"
-test = ""
-short_ip = "1.1.1.1"
-not_valid_ip = "256.-1.1000.532"
+# Variables # TestOnly
+#my_ip = "192.168.178.177"
+#test = ""
+#short_ip = "1.1.1.1"
+#not_valid_ip = "256.-1.1000.532"
 
-# Test entry
+# Eintrag # TestOnly
 #IPv4_entry = my_ip
 
 # checks
@@ -23,16 +28,16 @@ check_number_range = False
 
 
 # MAIN
-print("IPv4 Validierung")
+print("IPv4 Validierung by Sandro Zappulla")
 IPv4_entry = input("Bitte Geben Sie eine gültige IPv4-Adresse ein: ") # Eingabe
 
-# Check: Not empty
+# Überprüfe: Nicht leer
 if IPv4_entry == '':
     check_empty_input = True
 
 
 
-# Check: Length (Mind. 7 Max. 15 Zeichen)
+# Überprüfe: Länge (Mind. 7 Max. 15 Zeichen)
 length = len(IPv4_entry)
 if length >= 7 and length <= 15:
     check_length = True 
@@ -90,7 +95,7 @@ digit_split = IPv4_entry.split(".")
 # Überprüfung: Validierung einer einzelnen Zahl (Zwischen 0-255)
 correct_number_counter = 0
 
-# Bevor jede Zahl einzelnd Validiert wird erwarten wir das erst die Überprüfung "RegEx" richtig ist
+# Bevor jede Zahl einzelnd Validiert wird erwarten wir das erst die Überprüfung "Keine Punkte Hintereinander (RexEx)" richtig ist
 if check_regex_pattern == True:
     for digit in digit_split:
         int_digit = int(digit)
